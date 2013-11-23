@@ -1,3 +1,8 @@
+#!/usr/bin/env bash
+
+# VARS
+RUBY_VERSION="ruby-1.9.3-p448"
+
 # INSTALL BASE ITEMS
 sudo apt-get -y update
 sudo apt-get -y install curl build-essential libxslt-dev libxml2-dev zlib1g-dev git-core sqlite3 libxml2 libsqlite3-dev libyaml-dev libssl-dev libreadline-dev vim tmux git-core ack-grep
@@ -11,13 +16,13 @@ sudo apt-get -y install mongodb-10gen
 
 # INSTALL RUBY
 sudo rm -rf /opt/vagrant_ruby
-curl --remote-name http://ftp.ruby-lang.org/pub/ruby/1.9/$4.tar.gz
-tar zxf $4.tar.gz
-cd $4
+curl --remote-name http://ftp.ruby-lang.org/pub/ruby/1.9/$RUBY_VERSION.tar.gz
+tar zxf $RUBY_VERSION.tar.gz
+cd $RUBY_VERSION
 ./configure
 make
 sudo make install
 cd /home/vagrant
-sudo rm -rf $4
-sudo rm -rf $4.tar.gz
+sudo rm -rf $RUBY_VERSION
+sudo rm -rf $RUBY_VERSION.tar.gz
 sudo gem install bundler
