@@ -7,16 +7,12 @@ RUBY_VERSION="ruby-1.9.3-p448"
 sudo apt-get -y update
 sudo apt-get -y install curl build-essential libxslt-dev libxml2-dev zlib1g-dev git-core sqlite3 libxml2 libsqlite3-dev libyaml-dev libssl-dev libreadline-dev vim tmux git-core ack-grep
 
-# INSTALL NODE
-sudo apt-get -y install python-software-properties
-sudo apt-add-repository -y ppa:chris-lea/node.js
+sudo mkdir -p /data/db
+sudo chown -R vagrant:vagrant /data/db
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv 7F0CEB10
+echo "deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen" | sudo tee -a /etc/apt/sources.list.d/10gen.list
 sudo apt-get -y update
-sudo apt-get -y install nodejs
-
-# INSTALL MYSQL
-sudo debconf-set-selections <<< 'mysql-server-5.5 mysql-server/root_password password root'
-sudo debconf-set-selections <<< 'mysql-server-5.5 mysql-server/root_password_again password root'
-sudo apt-get -y install mysql-server mysql-client libmysqlclient-dev
+sudo apt-get -y install mongodb-10gen
 
 # INSTALL RUBY
 sudo rm -rf /opt/vagrant_ruby
@@ -35,7 +31,7 @@ sudo gem install bundler
 su -c "git clone https://github.com/jasonvan/dotfiles" vagrant
 su -c "mkdir -p .vim .vim/autoload .vim/bundle .vim/backup" vagrant
 su -c "curl -Sso .vim/autoload/pathogen.vim  https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim" vagrant
-su -c "mv dotfiles/.vimrc ./.vimrc" vagrant
+su -c "mv dotfiles/.vimrc-unix ./.vimrc" vagrant
 su -c "mv dotfiles/.vimrc_main ./.vimrc_main" vagrant
 su -c "mv dotfiles/.tmux.conf ./.tmux.conf" vagrant
 su -c "rm -rf dotfiles" vagrant
@@ -54,7 +50,3 @@ su -c "git clone http://github.com/tsaleh/vim-align.git" vagrant
 su -c "git clone https://github.com/terryma/vim-multiple-cursors" vagrant
 su -c "git clone https://github.com/Lokaltog/vim-powerline.git" vagrant
 
-#POST INSTALL
-#sudo bundle install
-#rake db:create
-#mysql -uroot -p [DATABASE NAME] < [SQL FILE]
