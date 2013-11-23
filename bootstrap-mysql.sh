@@ -54,7 +54,3 @@ su -c "git clone http://github.com/tsaleh/vim-align.git" vagrant
 su -c "git clone https://github.com/terryma/vim-multiple-cursors" vagrant
 su -c "git clone https://github.com/Lokaltog/vim-powerline.git" vagrant
 
-#POST INSTALL
-#sudo bundle install
-#rake db:create
-#mysql -uroot -p [DATABASE NAME] < [SQL FILE]
