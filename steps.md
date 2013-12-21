@@ -13,6 +13,7 @@
 * `rake db:create`
 * `sudo nano /etc/mysql/my.cnf` and update `bind-address = 0.0.0.0`
 * `sudo service mysql restart`
+* connect sequel pro
 * Run `rails s` to make sure project is working
 * Add rspec and cabybara to project under :development, :test and :test respectively
 
