@@ -1,3 +1,5 @@
+# Create a new rails project on Vagrant
+
 * Create new folder for project `mkdir [projec name]`
 * `cd` into that directory
 * `curl --remote-name https://raw.github.com/jasonvan/scripts/master/Vagrantfile`
