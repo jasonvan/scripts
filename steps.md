@@ -1,6 +1,6 @@
 1. Create new folder for project `mkdir [projec name]`
 2. `cd` into that directory
-3. curl --remote-name https://raw.github.com/jasonvan/scripts/master/Vagrantfile
+3. `curl --remote-name https://raw.github.com/jasonvan/scripts/master/Vagrantfile`
 4 Set the box you want in the config file e.g., ruby-1.9.3-mysql
 5. Run `vagrant up` from directory to start up VM
 6. Run `vagrant ssh`
