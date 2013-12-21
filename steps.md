@@ -7,7 +7,7 @@
 * `cd /vagrant`
 * Install rails with `sudo gem install rails`
 * Run `rails new [project name] /vagrant/ -d mysql --skip-test-unit` to create a rails project with mysql and not using test unit
-* Run `rm [project name]/.gitignore && rmdir [project name]`
+* Run `rm [project name]/.gitignore && mv [project name]/* ./ && rmdir [project name]`
 * `curl --remote-name https://raw.github.com/jasonvan/dotfiles/master/.gitignore` 
 * Set up database. Edit config/database.yml and set password for development and testing profile to root
 * `rake db:create`
