@@ -34,3 +34,4 @@ end
 * Run `bundle install`
 * git init
 * Commit initial repo
+* Set up sequel pro to connect to mysql db ![](https://raw2.github.com/jasonvan/scripts/master/sequel-pro-configs.png)
