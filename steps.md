@@ -13,7 +13,7 @@
 * Run `rm [project name]/.gitignore && mv [project name]/* ./ && rmdir [project name]`
 * `curl --remote-name https://raw.github.com/jasonvan/dotfiles/master/.gitignore` 
 * Set up database. Edit config/database.yml and set password for development and testing profile to root
-* `rake db:create`
+* `bundle exec rake db:create:all`
 * `sudo nano /etc/mysql/my.cnf` and update `bind-address = 0.0.0.0`
 * `sudo service mysql restart`
 * connect sequel pro
