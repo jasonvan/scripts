@@ -35,6 +35,21 @@ end
 * Run `bundle install`
 * `bundle exec rails generate rspec:install`
 * Confirm that .rspec and rspec directory was created
+* Update config/application.rb to include the following inside of Application class:
+
+```ruby
+config.generators do |g|
+  g.test_framework :rspec,
+    fixtures: true,
+    view_specs: false,
+    helper_specs: false,
+    routing_specs: false,
+    controller_specs: true,
+    request_specs: false
+  g.fixture_replacement :factory_girl, dir: "spec/factories"
+end
+```
+
 * git init
 * Commit initial repo
 * Set up sequel pro to connect to mysql db ![](https://raw2.github.com/jasonvan/scripts/master/sequel-pro-configs.png)
