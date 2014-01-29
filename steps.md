@@ -49,7 +49,7 @@ config.generators do |g|
   g.fixture_replacement :factory_girl, dir: "spec/factories"
 end
 ```
-
+* `bundle exec rake db:test:clone`
 * git init
 * Commit initial repo
 * Set up sequel pro to connect to mysql db ![](https://raw2.github.com/jasonvan/scripts/master/sequel-pro-configs.png)
