@@ -16,7 +16,6 @@
 * `bundle exec rake db:create:all`
 * `sudo nano /etc/mysql/my.cnf` and update `bind-address = 0.0.0.0`
 * `sudo service mysql restart`
-* connect sequel pro
 * Run `rails s` to make sure project is working
 * Add rspec and cabybara to project under :development, :test and :test respectively
 
@@ -34,6 +33,8 @@ end
 ```
 
 * Run `bundle install`
+* `bundle exec rails generate rspec:install`
+* Confirm that .rspec and rspec directory was created
 * git init
 * Commit initial repo
 * Set up sequel pro to connect to mysql db ![](https://raw2.github.com/jasonvan/scripts/master/sequel-pro-configs.png)
