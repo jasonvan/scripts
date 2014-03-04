@@ -35,6 +35,7 @@ end
 * Run `bundle install`
 * `bundle exec rails generate rspec:install`
 * Confirm that .rspec and rspec directory was created
+* Add `--format documentation` to `.rspec`
 * Update config/application.rb to include the following inside of Application class:
 
 ```ruby
