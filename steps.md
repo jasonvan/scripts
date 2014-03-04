@@ -16,7 +16,7 @@
 * `bundle exec rake db:create:all`
 * `sudo nano /etc/mysql/my.cnf` and update `bind-address = 0.0.0.0`
 * `sudo service mysql restart`
-* Set up sequel pro to connect to mysql db ![](https://raw2.github.com/jasonvan/scripts/master/sequel-pro-configs.png)
+* Set up sequel pro to connect to mysql db. SSH password is vagrant ![](https://raw2.github.com/jasonvan/scripts/master/sequel-pro-configs.png)
 * Add rspec and cabybara to project under :development, :test and :test respectively
 
 ```ruby
