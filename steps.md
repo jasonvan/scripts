@@ -2,7 +2,7 @@
 
 * Create new folder for project `mkdir [projec name]`
 * `cd` into that directory
-* `curl --remote-name https://raw.github.com/jasonvan/scripts/master/Vagrantfile`
+* `curl --remote-name https://raw.githubusercontent.com/jasonvan/scripts/master/Vagrantfile`
 * Set the box you want in the config file e.g., ruby-1.9.3-mysql
 * Uncomment the rails port-forwarding and mysql port-forwarding
 * Run `vagrant up` from directory to start up VM
