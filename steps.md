@@ -11,7 +11,7 @@
 * Install rails with `sudo gem install rails`
 * Run `rails new [project name] . -d mysql --skip-test-unit` to create a rails project with mysql and not using test unit
 * Run `rm [project name]/.gitignore && mv [project name]/* ./ && rmdir [project name]`
-* `curl --remote-name https://raw.github.com/jasonvan/dotfiles/master/.gitignore` 
+* `curl --remote-name https://raw.githubusercontent.com/jasonvan/dotfiles/master/.gitignore` 
 * Set up database. Edit config/database.yml and set password for development and testing profile to root
 * `bundle exec rake db:create:all`
 * `sudo nano /etc/mysql/my.cnf` and update `bind-address = 0.0.0.0`
